@@ -14,15 +14,8 @@
             hoursWorked = $("#txtHoursWorked").val();
             hourlyRate = $("#txtHourlyRate").val();
 
-            var timeDayWorked = getRadioValue("rdoTimedayworked");
-
-            var mywage = timeDayWorked * wages(hoursWorked, hourlyRate);
-
-            localStorage.setItem("hoursworked", hoursWorked);
-            localStorage.setItem("hourlyrate", hourlyRate);
-            localStorage.setItem("actualwage", mywage);
-
-            window.location = "result.html";
+            var mywage = wages(hoursWorked, hourlyRate);
+            alert("Your wage is " + mywage);
         });
     });
 
